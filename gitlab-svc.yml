@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    name: gitlab
+    name: gitlab-nodeport
   ports:
     - name: http
       port: 90
