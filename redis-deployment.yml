@@ -16,6 +16,7 @@ spec:
     metadata:
       labels:
         name: gitlab-redis
+        app: gitlab-redis
     spec:
       containers:
       - name: gitlab-redis
