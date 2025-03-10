@@ -3,7 +3,14 @@ kind: Deployment
 metadata:
   name: gitlab-postgresql
   namespace: gitlab
+  labels:
+    app: gitlab-postgresql
+    version: v1
+    kubernetes.io/cluster-service: "true"
 spec:
+  selector:
+    matchLabels:
+      app: gitlab-postgresql
   replicas: 1
   template:
     metadata:
