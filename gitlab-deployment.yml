@@ -40,7 +40,7 @@ spec:
         - name: GITLAB_ROOT_PASSWORD
           value: GitlabRootPassword
         - name: GITLAB_ROOT_EMAIL
-          value: root@example.com
+          value: root@example:wq.com
 
         - name: GITLAB_HOST
           value: "osboxes"
@@ -123,13 +123,13 @@ spec:
             path: /users/sign_in
             port: 90
           initialDelaySeconds: 280
-          timeoutSeconds: 30
+          timeoutSeconds: 260
         readinessProbe:
           httpGet:
             path: /users/sign_in
             port: 90
           initialDelaySeconds: 180
-          timeoutSeconds: 30
+          timeoutSeconds: 260
       volumes:
       - name: data
         emptyDir: {}
