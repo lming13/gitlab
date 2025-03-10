@@ -16,3 +16,5 @@ spec:
     - name: ssh
       port: 1022
       targetPort: ssh
+  externalIPs:
+    - 192.168.222.132
