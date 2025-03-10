@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       app: gitlab-postgresql
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -45,8 +45,8 @@ spec:
             - localhost
             - -U
             - postgres
-          initialDelaySeconds: 30
-          timeoutSeconds: 5
+          initialDelaySeconds: 40
+          timeoutSeconds: 20
         readinessProbe:
           exec:
             command:
@@ -55,8 +55,8 @@ spec:
             - localhost
             - -U
             - postgres
-          initialDelaySeconds: 5
-          timeoutSeconds: 1
+          initialDelaySeconds: 40
+          timeoutSeconds: 20
       volumes:
       - name: data
         emptyDir: {}
