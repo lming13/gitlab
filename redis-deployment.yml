@@ -4,6 +4,8 @@ metadata:
   name: gitlab-redis
   namespace: gitlab
 spec:
+  selector:
+    app: gitlab-redis
   replicas: 1
   template:
     metadata:
