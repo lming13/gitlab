@@ -43,11 +43,11 @@ spec:
           value: root@example.com
 
         - name: GITLAB_HOST
-          value: git.example.com
+          value: "osboxes"
         - name: GITLAB_PORT
           value: "90"
         - name: GITLAB_SSH_HOST
-          value: "ssh-git.example.com"
+          value: "osboxes"
         - name: GITLAB_SSH_PORT
           value: "1022"
 
@@ -121,13 +121,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 180
           timeoutSeconds: 15
         readinessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 15
           timeoutSeconds: 1
       volumes:
