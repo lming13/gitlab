@@ -45,7 +45,7 @@ spec:
         - name: GITLAB_HOST
           value: "osboxes"
         - name: GITLAB_PORT
-          value: "90"
+          value: "80"
         - name: GITLAB_SSH_HOST
           value: "osboxes"
         - name: GITLAB_SSH_PORT
@@ -112,7 +112,7 @@ spec:
           value: "false"
         ports:
         - name: http
-          containerPort: 90
+          containerPort: 80
         - name: ssh
           containerPort: 22
         volumeMounts:
@@ -121,13 +121,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 180
           timeoutSeconds: 15
         readinessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 15
           timeoutSeconds: 1
       volumes:
