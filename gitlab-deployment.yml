@@ -121,13 +121,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 180
           timeoutSeconds: 15
         readinessProbe:
           httpGet:
             path: /users/sign_in
-            port: 90
+            port: 80
           initialDelaySeconds: 15
           timeoutSeconds: 1
       volumes:
