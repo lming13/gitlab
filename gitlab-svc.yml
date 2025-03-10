@@ -10,7 +10,7 @@ spec:
     name: gitlab
   ports:
     - name: http
-      port: 90
+      port: 80
       targetPort: http
     - name: ssh
       port: 1022
