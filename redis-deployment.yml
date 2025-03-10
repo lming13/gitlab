@@ -3,9 +3,14 @@ kind: Deployment
 metadata:
   name: gitlab-redis
   namespace: gitlab
+  labels:
+    app: gitlab-redis
+    version: v1
+    kubernetes.io/cluster-service: "true"
 spec:
   selector:
-   app.kubernetes.io/name: gitlab-redis
+    matchLabels:
+      app: gitlab-redis
   replicas: 1
   template:
     metadata:
